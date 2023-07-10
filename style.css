@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Overpass+Mono&family=Prompt&display=swap');
+
+:root {
+  --dark_cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very_dark_blue: hsl(212, 21%, 14%);
+  --gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-fraunces: 'Fraunces', serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--cream);
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: var(--ff-montserrat);
+  padding: 1.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  width: 37.5rem;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.product-content {
+  padding: 1.9rem;
+}
+
+.product-category {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-family: var(--ff-fraunces);
+  color: var(--very_dark_blue);
+  line-height: 0.97;
+  margin-block: 1.25rem 1.5rem;
+}
+
+.product-description {
+  line-height: 1.65;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1.1875rem;
+  margin-block: 1.25rem;
+}
+
+.product-price--current {
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark_cyan);
+}
+
+.product-price--original {
+  font-size: 0.8125rem;
+  text-decoration: line-through;
+}
+
+.product-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding-block: 0.9rem;
+  background-color: var(--dark_cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.product-btn:hover {
+  background-color: var(--very_dark_blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 640px) {
+  .product-card {
+    width: 21.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .product-content {
+    padding: 1.5rem;
+  }
+
+  .product-title {
+    margin-block: 0.75rem 1rem;
+  }
+
+  .product-price {
+    margin-block: 1rem;
+  }
+}
